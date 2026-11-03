@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3 - Local Storage</title>
+</head>
+<body>
+
+    <!-- Name: Daniyal Malik -->
+    <!-- Roll Number: 2510303175 -->
+    <!-- Assignment Number: 09 -->
+    <!-- Task 3: Local Storage -->
+
+    <h2>Save Your Note</h2>
+
+    <input type="text" id="note" placeholder="Enter your note">
+
+    <button onclick="saveNote()">Save</button>
+
+    <script>
+        // Show saved text when page opens
+        document.getElementById("note").value =
+            localStorage.getItem("note") || "";
+
+        function saveNote() {
+            let text = document.getElementById("note").value;
+
+            localStorage.setItem("note", text);
+
+            alert("Note saved successfully!");
+        }
+    </script>
+
+</body>
+</html>

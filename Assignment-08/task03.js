@@ -1,0 +1,25 @@
+
+// Name: Daniyal Malik
+// Roll Number: 2510303175
+// Assignment Number: 08
+// Task 3: Composition of Classes
+
+class Engine {
+    constructor(power) {
+        this.power = power;
+    }
+}
+
+class Car {
+    constructor(power) {
+        this.engine = new Engine(power);
+    }
+
+    start() {
+        return "Car starts with " + this.engine.power + " HP";
+    }
+}
+
+let car1 = new Car(150);
+
+console.log(car1.start());

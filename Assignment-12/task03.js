@@ -1,0 +1,15 @@
+
+// Name: Daniyal Malik
+// Roll Number: 2510303175
+// Assignment Number: 12
+// Task 3: repeatAction and Callback
+
+function repeatAction(times, action) {
+    for (let i = 1; i <= times; i++) {
+        action(i);
+    }
+}
+
+repeatAction(3, (round) => {
+    console.log("Round " + round);
+});
